@@ -24,7 +24,7 @@ export async function POST(request: Request) {
       0
     );
 
-    const userId = session?.user?.id || null;
+    const userId = (session?.user as any)?.id || null;
 
     let createdOrder: Order;
 
